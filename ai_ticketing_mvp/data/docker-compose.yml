@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the database file to persist data outside the container
+      - ./tickets.db:/app/tickets.db
+      # Mount the saved model
+      - ./nlp/saved_models:/app/nlp/saved_models
+    environment:
+      - DATABASE_URL=sqlite:///./tickets.db

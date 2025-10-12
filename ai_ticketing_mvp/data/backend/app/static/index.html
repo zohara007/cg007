@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ticketing System MVP</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a New IT Ticket</h1>
+        <form id="ticket-form">
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <input type="text" id="summary" placeholder="e.g., Cannot connect to VPN" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="5" placeholder="Please provide details, including any error messages." required></textarea>
+            </div>
+            <button type="submit">Create Ticket</button>
+        </form>
+
+        <hr>
+
+        <h2>Existing Tickets</h2>
+        <div id="ticket-list">
+            <p>Loading tickets...</p>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
